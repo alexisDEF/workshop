@@ -13,11 +13,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
             $table->string('pseudo');
-            $table->integer('score');
-            $table->double('timer')->nullable();
+            $table->string('timer')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('play');
 });
+Route::get('/game/{pseudo}', [\App\Http\Controllers\EscapeController::class, 'index'])->name('game');
+Route::get('/end/{timer}', [\App\Http\Controllers\EscapeController::class, 'create'])->name('game.create');
+
