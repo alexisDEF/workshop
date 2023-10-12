@@ -1974,7 +1974,7 @@ function verify() {
 
 
     if (
-         //puzzlerSolved &&
+         puzzlerSolved &&
          //mathPuzzleSolved &&
          //flexboxPuzzleSolved &&
          mirrorPuzzleSolved
