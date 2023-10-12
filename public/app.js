@@ -120,6 +120,20 @@ function posterToTransparent() {
     toOpacity("#poster", "0.2");
 }
 
+
+function indiceMapToColor() {
+    toColor("#fishbooks .st0", brightBlueColor);
+}
+
+function indiceMapToWhite() {
+    toColor("#fishbooks .st0", white);
+}
+
+function posterToTransparent() {
+    toOpacity("#poster", "0.2");
+}
+
+
 function posterToOpaque() {
     toOpacity("#poster", "1");
 }
@@ -156,6 +170,12 @@ document
 document
     .getElementById("pipePuzzleBtn")
     .addEventListener("mouseout", computerToWhite);
+document
+    .getElementById("indiceMap")
+    .addEventListener("mouseover", indiceMapToColor);
+document
+    .getElementById("indiceMap")
+    .addEventListener("mouseout", indiceMapToWhite);
 
 document
     .getElementById("puzzlerBtn")
@@ -175,7 +195,15 @@ document
 // Cheryl Velez - Puzzler
 
 // MODAL
+var indiceMapBtn = document.getElementById("indiceMap");
 
+indiceMapBtn.onclick = function() {
+
+    var nouvellePage = window.open( '../img/indiceMap.jpg');
+
+// Facultatif : définissez des options pour la fenêtre (largeur, hauteur, etc.)
+    nouvellePage.focus();
+};
 // Get the modal
 var puzzlerModal = document.getElementById("puzzlerModal");
 
@@ -321,7 +349,7 @@ $(document).ready(function() {
             }
         });
         if (c > 0) {
-            $("#alert").html("Please place all tiles!");
+            $("#alert").html("Les tuiles sont mal placées");
         } else {
             var w = 0;
             $.each(ansID, function(obj, value) {
@@ -331,7 +359,7 @@ $(document).ready(function() {
 
                 if (w == 8) {
                     puzzlerSolved = true;
-                    $("#alert").html("You solved it!");
+                    $("#alert").html("Vous avez résolu l'énigme. Bien joué !");
 
                     //unlock 1st padlock once puzzle is solved
                     // checkPadlocks('padlock0',puzzlerSolved);
@@ -341,7 +369,7 @@ $(document).ready(function() {
                     //$("#alert").html(`You win! ${puzzlerSolved}`);
                     //console.log(puzzlerSolved); //done- trigger worked
                 } else {
-                    $("#alert").html("Sorry please try again!");
+                    $("#alert").html("Incorrect, veuillez réessayer");
                     puzzlerSolved = false;
                 }
 
@@ -372,9 +400,6 @@ var mathPuzzleBtn = document.getElementById("mathPuzzleBtn");
 var closeMathPuzzle = document.getElementsByClassName("close-mathpuzzle")[0];
 
 // When the user clicks the button, open the modal
-mathPuzzleBtn.onclick = function() {
-    mathPuzzleModal.style.display = "grid";
-};
 
 // When the user clicks on <span> (x), close the modal and check whether all puzzles solved
 closeMathPuzzle.onclick = function() {
@@ -780,9 +805,6 @@ var closeFlexboxPuzzle = document.getElementsByClassName(
 )[0];
 
 // When the user clicks the button, open the modal
-flexboxPuzzleBtn.onclick = function() {
-    flexboxPuzzleModal.style.display = "grid";
-};
 
 // When the user clicks on <span> (x), close the modal adn check whether all puzzles solved
 closeFlexboxPuzzle.onclick = function() {
@@ -1110,7 +1132,7 @@ $(function() {
         drop: function(event, ui) {
             $("#note-text").removeClass("mirror-text");
 
-            $("#mirror-clue").replaceWith("<p>Ah, there we go. Interesting.</p>");
+            $("#mirror-clue").replaceWith("<p>Ah, voici une définition intéressante !</p>");
 
             mirrorPuzzleSolved = true;
 
@@ -1168,10 +1190,6 @@ var pipePuzzleBtn = document.getElementById("pipePuzzleBtn");
 var closePipePuzzle = document.getElementsByClassName("close-pipepuzzle")[0];
 
 // When the user clicks the button, open the modal
-pipePuzzleBtn.onclick = function() {
-    pipePuzzleModal.style.display = "grid";
-    myFunction();
-};
 
 // When the user clicks on <span> (x), close the modal and check whether all puzzles solved
 closePipePuzzle.onclick = function() {
@@ -1917,6 +1935,7 @@ const app = new Vue({
 var haveEscaped;
 
 function escapeNow() {
+    document.getElementById("tempsJeu").textContent = "Temps réalisé :" + timerElement.innerText;
     haveEscaped = setTimeout(function() {
         //  replace door with opened version
         document.getElementById("door").style.opacity = "0";

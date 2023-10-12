@@ -119,6 +119,7 @@ svg {
 #puzzlerBtn:hover,
 #recursionPuzzleBtn:hover,
 #pipePuzzleBtn:hover,
+#indiceMap:hover,
 #mirrorPuzzleBtn:hover,
 #noteBtn:hover {
     cursor: pointer;
@@ -943,6 +944,12 @@ input[type=number] {
     font-size: 200px;
     justify-self: center;
     align-self: end;
+}
+
+#escaped h2 {
+    font-size: 50px;
+    justify-self: center;
+    align-self: start;
 }
 
 #escaped button {

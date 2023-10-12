@@ -9,8 +9,9 @@
 <body>
 
 <div id="escaped">
+    <h2 id="tempsJeu"></h2>
     <br>
-    <h1>Escaped !</h1>
+    <h1>Bravo !</h1>
     <br>
     <button onclick="getOut()">Fin du jeu</button>
 </div>
@@ -29,37 +30,37 @@
           <p id="alert"></p>
         </div>
       </div>
-      <p class="quote">"The person who masters himself through self-control and discipline is truly undefeatable." -Buddha</p><br><br>
-      <p class="quote">Règles: Résoud l'énigme des tuiles : les images sont dans le désordre <br>Pouvez vous trouver le bon ordre ?<br>Faites glisser et déposez les tuiles dans les cases vides dans le bon ordre.<br>
-      <span class="bighint">Découvrez la question !</span><span class="revealtext"><b>Quelle sont les conséquences du harcèlement autravail ?</b>  </span> </p>
+        <p class="quote">Quelle sont les conséquences du harcèlement au travail ?</p><br><br>
+      <p class="quote">Règles: Résoud l'énigme des tuiles : les images sont dans le désordre <br>Pouvez vous trouver le bon ordre ?<br>Faites glisser et déposer les tuiles dans les cases vides dans le bon ordre.<br>
+      <span class="bighint">Découvrez un indice</span><span class="revealtext"><b> "La véritable connaissance se trouve parfois entre les pages." </b> </span> </p>
 
-      <div id="btn-container"><button>Submit Answer</button>
+      <div id="btn-container"><button>Soumettre la réponse</button>
       </div>
       <div class="outerflex">
         <div class="topContainer">
           <div class="outerBorder">
-            <div class="tile" id="1"><img src="../../public/img/3.png" alt="" /></div>
+            <div class="tile" id="1"><img src="{{asset("/img/3.png")}}" alt="" /></div>
           </div>
           <div class="outerBorder">
-            <div class="tile" id="2"><img src="../../public/img/4.png" alt="" /></div>
+            <div class="tile" id="2"><img src="{{asset("/img/4.png")}}" alt="" /></div>
           </div>
           <div class="outerBorder">
-            <div class="tile" id="3"><img src="../../public/img/7.png" alt="" /></div>
+            <div class="tile" id="3"><img src="{{asset("/img/7.png")}}" alt="" /></div>
           </div>
           <div class="outerBorder">
-            <div class="tile" id="4"><img src="../../public/img/6.png" alt="" /></div>
+            <div class="tile" id="4"><img src="{{asset("/img/6.png")}}" alt="" /></div>
           </div>
           <div class="outerBorder">
-            <div class="tile" id="5"><img src="../../public/img/8.png" alt="" /></div>
+            <div class="tile" id="5"><img src="{{asset("/img/8.png")}}" alt="" /></div>
           </div>
           <div class="outerBorder">
-            <div class="tile" id="6"><img src="../../public/img/1.png" alt="" /></div>
+            <div class="tile" id="6"><img src="{{asset("/img/1.png")}}" alt="" /></div>
           </div>
           <div class="outerBorder">
-            <div class="tile" id="7"><img src="../../public/img/5.png" alt="" /></div>
+            <div class="tile" id="7"><img src="{{asset("/img/5.png")}}" alt="" /></div>
           </div>
           <div class="outerBorder">
-            <div class="tile" id="8"><img src="../../public/img/2.png" alt="" /></div>
+            <div class="tile" id="8"><img src="{{asset("/img/2.png")}}" alt="" /></div>
           </div>
         </div>
         <!-- top container -->
@@ -1061,6 +1062,7 @@ c201 45 521 152 626 209 25 14 -137 15 -1612 15 l-1640 -1 85 -40z"/>
 
   <rect id="puzzlerBtn" x="118.4" y="10" class="st2" width="8.1" height="8" />
 <rect id="pipePuzzleBtn" x="156" y="34.8" class="st2" width="34" height="23.5" />
+    <rect id="indiceMap" x="234" y="44" class="st2" width="8" height="8"/>
 <!--<rect id="pipePuzzleBtn" x="269" y="75" class="st2" width="30" height="30" />-->
 <g id="open-door" class="st3">
   <path class="st0" d="M49.1,53.9c0,1.5,1.2,2.8,2.8,2.8c1.5,0,2.8-1.2,2.8-2.8c0-1.5-1.2-2.8-2.8-2.8C50.3,51.2,49.1,52.4,49.1,53.9
